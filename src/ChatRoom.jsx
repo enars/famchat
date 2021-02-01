@@ -21,7 +21,7 @@ export default function ChatRoom(props) {
   const sendMessage = async(e) => {
     e.preventDefault()
 
-    const {uid, photoURL} = auth.currentUser
+    const {uid, photoURL} = auth.currentUser 
 
     await messagesRef.add({
       text: formValue,
@@ -46,7 +46,7 @@ export default function ChatRoom(props) {
       <MessageForm onSubmit={sendMessage}>
         <Input value={formValue} onChange={(e) => setFormValue(e.target.value) } />
         
-        <Button type="submit">send</Button>
+        <Button type="submit">Send</Button>
       </MessageForm>
     </>
   )

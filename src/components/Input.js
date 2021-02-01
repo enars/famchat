@@ -5,5 +5,4 @@ export default styled.input`
   width: 100%;
   min-height: 50px;
   border: none;
-  background-color: grey;
 `

@@ -4,7 +4,7 @@ import ChatRoom from './ChatRoom'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 
-import { fb, firestore, auth } from './services/firestore'
+import { fb, auth } from './services/firestore'
 
 function App() {
 
@@ -13,10 +13,11 @@ function App() {
   return (
     <div className="App">
       <Header>
+        <h1>FamChat "probably the best chat" - Juhee Kim (2021)</h1>
       </Header>
 
       <section>
-        {user ? <ChatRoom props={fb, auth, firestore} /> : <SignIn />}
+        {user ? <ChatRoom /> : <SignIn />}
       </section>
     </div>
   );
