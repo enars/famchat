@@ -1,26 +1,32 @@
+import './App.css';
 import styled from 'styled-components'
 
 import { auth } from './services/firestore'
 
-const Message = styled.div`
-  border: solid 1px white;
+const MessageGroup = styled.div`
   border-radius: 10px;
   padding: 10px;
-  width: 60%;
   display: flex;
-  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+`
+const Name = styled.div`
+  
+`
+const SpeechBubble = styled.div`
 
-  .received {
-    color: red;
-  }
+`
+const Text = styled.p`
+  padding: 10px;
+  background-color: beige;
+  color: black;
+  border-radius: 5px;
 
 `
 
-
 const ProfilePicture = styled.img`
   border-radius: 50%;
-  height: 5vw;
-  margin-right: 2vw;
+  height: 2rem;
 `
 
 
@@ -30,10 +36,12 @@ export default function ChatMessage(props) {
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received'
 
   return (
-  <Message className={`message ${messageClass}`}>
+  <MessageGroup className={`message ${messageClass}`}>
     <ProfilePicture alt='' src={photoURL}></ProfilePicture>
-    <p>{text}</p>
-    
-  </Message>
+    <SpeechBubble>
+      <Name>Ejnar</Name>
+      <Text>{text}</Text>
+    </SpeechBubble>
+  </MessageGroup>
   ) 
 }
