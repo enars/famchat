@@ -1,7 +1,7 @@
-import './App.css';
+import './../App.css';
 import styled from 'styled-components'
 
-import { auth } from './services/firestore'
+import { auth } from './../services/firestore'
 
 const MessageGroup = styled.div`
   border-radius: 10px;

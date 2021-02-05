@@ -1,19 +1,18 @@
 import { useState, useRef } from 'react';
 import ChatMessage from './ChatMessage'
-import MessageForm from './components/MessageForm'
-import Button from './components/Button';
-import Input from './components/Input';
+import MessageForm from '../elements/MessageForm'
+import Button from '../elements/Button';
+import Input from '../elements/Input';
 
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
-import { fb, firestore, auth } from './services/firestore'
-
+import { fb, firestore, auth } from '../services/firestore'
 
 export default function ChatRoom(props) {
   const messagesRef = firestore.collection('messages')
   const query = messagesRef.orderBy('createdAt').limit(25)
 
-  const [messages] = useCollectionData(query, {idField: 'id'})
+  const [messages] = useCollectionData(query, { idField: 'id' })
 
   const dummy = useRef()
 
