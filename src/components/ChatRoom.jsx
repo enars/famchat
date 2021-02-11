@@ -6,8 +6,7 @@ import Input from './elements/Input';
 
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
-import { fb, firestore, auth } from './services/firestore'
-
+import { fb, firestore, auth } from '../services/firestore'
 
 export default function ChatRoom(props) {
   const messagesRef = firestore.collection('messages')

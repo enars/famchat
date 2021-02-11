@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Header>
         <h1>FamChat "probably the best chat" - Juhee Kim (2021)</h1>
+        {user ? <SignOut /> : null}
       </Header>
 
       <section>
@@ -32,12 +33,12 @@ function SignIn() {
   }
 
   return (
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <Button onClick={signInWithGoogle}>Sign in with Google</Button>
   )
 }
 
 function SignOut() {
   return auth.currentUser && (
-    <button onClick={() => auth.SignOut()}>Sign Out</button>
+    <button onClick={() => auth.signOut()}>Sign Out</button>
   )
 }
