@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './components/Header'
+import Header from './elements/Header'
 import ChatRoom from './ChatRoom'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
