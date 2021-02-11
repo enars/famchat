@@ -17,6 +17,7 @@ main {
 
 .received {
   justify-content: flex-start;
+  margin-right: 30px;
 }
 
 .received img {
@@ -25,6 +26,7 @@ main {
 
 .sent {
   justify-content: flex-end;
+  margin-left: 30px;
 }
 
 .sent img {

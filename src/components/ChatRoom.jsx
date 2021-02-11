@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import ChatMessage from './ChatMessage'
-import MessageForm from './../elements/MessageForm'
+import MessageForm from '../elements/MessageForm'
 import Button from './../elements/Button'
 import Input from './../elements/Input'
 

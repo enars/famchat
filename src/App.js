@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './elements/Header'
+import Button from './elements/Button'
 
 import ChatRoom from './components/ChatRoom'
 import SignIn from './components/SignIn'
@@ -31,6 +32,6 @@ export default App;
 
 function SignOut() {
   return auth.currentUser && (
-    <button onClick={() => auth.signOut()}>Sign Out</button>
+    <Button onClick={() => auth.signOut()}>Sign Out</Button>
   )
 }
