@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './elements/Header'
-import ChatRoom from './ChatRoom'
+
+import ChatRoom from './components/ChatRoom'
+import SignIn from './components/SignIn'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 
@@ -13,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header>
-        <h1>FamChat "probably the best chat" - Juhee Kim (2021)</h1>
+        <h1>FamChat</h1>
         {user ? <SignOut /> : null}
       </Header>
 
@@ -26,16 +28,6 @@ function App() {
 
 export default App;
 
-function SignIn() {
-  const signInWithGoogle = () => {
-    const provider = new fb.auth.GoogleAuthProvider()
-    auth.signInWithPopup(provider)
-  }
-
-  return (
-    <Button onClick={signInWithGoogle}>Sign in with Google</Button>
-  )
-}
 
 function SignOut() {
   return auth.currentUser && (

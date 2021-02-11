@@ -20,8 +20,8 @@ const Text = styled.p`
   padding: 10px;
   background-color: beige;
   color: black;
+  word-break: break-all;
   border-radius: 5px;
-
 `
 
 const ProfilePicture = styled.img`

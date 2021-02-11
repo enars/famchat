@@ -12,11 +12,11 @@ html {
 
 main {
   padding-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 6vh;
 }
 
 .received {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .received img {
@@ -24,7 +24,7 @@ main {
 }
 
 .sent {
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .sent img {

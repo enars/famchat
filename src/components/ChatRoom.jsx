@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react';
+import { useState, useRef } from 'react'
 import ChatMessage from './ChatMessage'
-import MessageForm from './elements/MessageForm'
-import Button from './elements/Button';
-import Input from './elements/Input';
+import MessageForm from './../elements/MessageForm'
+import Button from './../elements/Button'
+import Input from './../elements/Input'
 
 import { useCollectionData } from 'react-firebase-hooks/firestore'
 
