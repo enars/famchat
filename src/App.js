@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './elements/Header'
-import Button from './elements/Header'
+import Button from './elements/Button'
 import ChatRoom from './components/ChatRoom'
+import SignIn from './components/SignIn'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 
-import { fb, auth } from './services/firestore'
+import { auth } from './services/firestore'
 
 function App() {
 
@@ -27,19 +28,8 @@ function App() {
 
 export default App;
 
-function SignIn() {
-  const signInWithGoogle = () => {
-    const provider = new fb.auth.GoogleAuthProvider()
-    auth.signInWithPopup(provider)
-  }
-
-  return (
-    <Button onClick={signInWithGoogle}>Sign in with Google</Button>
-  )
-}
-
 function SignOut() {
   return auth.currentUser && (
-    <button onClick={() => auth.signOut()}>Sign Out</button>
+    <Button onClick={() => auth.signOut()}>Sign Out</Button>
   )
 }

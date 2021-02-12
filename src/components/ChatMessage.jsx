@@ -10,18 +10,17 @@ const MessageGroup = styled.div`
   flex-direction: row;
   align-items: center;
 `
-const Name = styled.div`
-  
-`
-const SpeechBubble = styled.div`
 
+const Name = styled.div`
+`
+
+const SpeechBubble = styled.div`
 `
 const Text = styled.p`
   padding: 10px;
   background-color: beige;
   color: black;
   border-radius: 5px;
-
 `
 
 const ProfilePicture = styled.img`
