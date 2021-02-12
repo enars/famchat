@@ -6,7 +6,7 @@ import SignIn from './components/SignIn'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 
-import { auth } from './services/firestore'
+import {  auth } from './services/firestore'
 
 function App() {
 
