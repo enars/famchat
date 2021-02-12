@@ -20,6 +20,7 @@ const Text = styled.p`
   padding: 10px;
   background-color: beige;
   color: black;
+  word-break: break-all;
   border-radius: 5px;
 `
 
@@ -31,16 +32,17 @@ const ProfilePicture = styled.img`
 
 
 export default function ChatMessage(props) {
+
   const {text, uid, photoURL} = props.message
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received'
 
   return (
-  <MessageGroup className={`message ${messageClass}`}>
-    <ProfilePicture alt='' src={photoURL}></ProfilePicture>
-    <SpeechBubble>
-      <Name>Ejnar</Name>
-      <Text>{text}</Text>
-    </SpeechBubble>
-  </MessageGroup>
+    <MessageGroup className={`message ${messageClass}`}>
+      <ProfilePicture alt='' src={photoURL}></ProfilePicture>
+      <SpeechBubble>
+        <Name>Ejnar</Name>
+        <Text>{text}</Text>
+      </SpeechBubble>
+    </MessageGroup>
   ) 
 }

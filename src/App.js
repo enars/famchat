@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header>
-        <h1>FamChat "probably the best chat" - Juhee Kim (2021)</h1>
+        <h1>FamChat</h1>
         {user ? <SignOut /> : null}
       </Header>
 

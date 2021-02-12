@@ -10,8 +10,14 @@ html {
   color: white;
 }
 
+main {
+  padding-top: 5vh;
+  margin-bottom: 6vh;
+}
+
 .received {
-  justify-content: left;
+  justify-content: flex-start;
+  margin-right: 30px;
 }
 
 .received img {
@@ -19,7 +25,8 @@ html {
 }
 
 .sent {
-  justify-content: right;
+  justify-content: flex-end;
+  margin-left: 30px;
 }
 
 .sent img {
@@ -27,7 +34,8 @@ html {
   margin-left: 2vw;
 }
 
-/* https://projects.verou.me/bubbly/ */
+/* Speech bubbles as made by:
+https://projects.verou.me/bubbly/ */
 
 .speech-bubble {
 	position: relative;
