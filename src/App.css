@@ -34,6 +34,12 @@ main {
   margin-left: 2vw;
 }
 
+/* Text */
+
+.bold {
+  font-weight: 800;
+}
+
 /* Speech bubbles as made by:
 https://projects.verou.me/bubbly/ */
 
