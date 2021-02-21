@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './elements/Header'
+import Header from './components/Header'
 import Button from './elements/Button'
 import ChatRoom from './components/ChatRoom'
 import SignIn from './components/SignIn'

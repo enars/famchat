@@ -13,15 +13,15 @@ export default function ChatRoom() {
   const query = messagesRef.orderBy('createdAt').limit(50)
   const [messages] = useCollectionData(query, {idField: 'id'})
 
-  const [formValue, setFormValue] = useState('')
+  const [formValue, _setFormValue] = useState('')
   const [isInvalidMessage, setIsInvalidMessage] = useState(true)
   
   const dummy = useRef()
 
   // Update state and check input
-  const handleFormUpdate = (input) => {
-    setFormValue(input)
-    setIsInvalidMessage(formValue.trim() ? false : true)      
+  const setFormValue = (input) => {
+    _setFormValue(input)
+    setIsInvalidMessage(input.trim() ? false : true)
   }
 
   const sendMessage = async(e) => {
@@ -51,7 +51,7 @@ export default function ChatRoom() {
       </main>
 
       <MessageForm onSubmit={sendMessage}>
-        <Input value={formValue} onChange={(e) => handleFormUpdate(e.target.value) } />
+        <Input value={formValue} onChange={(e) => setFormValue(e.target.value) } />
         
         <Button disabled={isInvalidMessage} type="submit">Send</Button>
       </MessageForm>
