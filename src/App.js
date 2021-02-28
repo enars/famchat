@@ -6,18 +6,15 @@ import SignIn from './components/SignIn'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 
-import {  auth } from './services/firestore'
+import { auth } from './services/firestore'
 
-function App() {
+export default function App() {
 
   const [user] = useAuthState(auth)
   
   return (
     <div className="App">
-      <Header>
-        <h1>FamChat</h1>
-        {user ? <SignOut /> : null}
-      </Header>
+      <Header user={user} />
 
       <section>
         {user ? <ChatRoom /> : <SignIn />}
@@ -26,10 +23,4 @@ function App() {
   );
 }
 
-export default App;
 
-function SignOut() {
-  return auth.currentUser && (
-    <Button onClick={() => auth.signOut()}>Sign Out</Button>
-  )
-}
