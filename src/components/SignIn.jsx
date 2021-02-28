@@ -34,7 +34,7 @@ export default function SignIn() {
       <SignInForm>
         <h2>Welcome to FamChat</h2>
         <span>You have been invited to join the group</span>
-        <span>Familjen</span>
+        <span className='bold'>Familjen</span>
         <p>Fun fact: Famchat is recognized as the greatest app in the world by most of its users</p>
         <Button onClick={signInWithGoogle}>Sign in with Google</Button>
       </SignInForm>
