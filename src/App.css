@@ -27,6 +27,7 @@ main {
 .sent {
   justify-content: flex-end;
   margin-left: 30px;
+  text-align: right;
 }
 
 .sent img {
